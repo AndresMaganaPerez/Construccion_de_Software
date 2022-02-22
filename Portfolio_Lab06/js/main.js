@@ -12,3 +12,19 @@ input_artista.onkeyup = () => {
 
   div_respuesta.innerHTML = "Tu artista favorito es " + input_artista.value;
 }
+
+let boton_foto = document.getElementById("muestra_foto_coach");
+
+function mostrar_foto_coach() {
+  let div_foto_coach = document.getElementById("foto_coach");
+  div_foto_coach.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5BcXNpzFh4pGXQ66b90UoisUil8-MNlKlVw&usqp=CAU">'
+  boton_foto.onclick = limpiar_foto;
+}
+
+function limpiar_foto() {
+  let div_foto_coach = document.getElementById("foto_coach")
+  div_foto_coach.innerHTML = '';
+  boton_foto.onclick = mostrar_foto_coach;
+}
+
+boton_foto.onclick = mostrar_foto_coach;
