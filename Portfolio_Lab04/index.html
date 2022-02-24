@@ -19,14 +19,71 @@
       <h1>Andrés Magaña Pérez</h1>
     </div>
   </header>
+  <!-- Ejercicio Cuadrados y Cubos -->
   <div  id = "Cuadrados y Cubos">
     <h2>Cuadrados y Cubos</h2>
     <label for="Cuadrados y Cubos">Ingresa un número: </label>
       <input id="numero_cuadrados" type="text">
     <button id = "Calculate" onclick="cuadrados()">Calcular</button>
-    <p id="Cuadrados"></p>
-    <p id="Cubos"></p>
+    <!--<p id="Cuadrados"></p>
+    <p id="Cubos"></p>-->
   </div>
+
+  <!-- Ejercicio Suma Aleatoria -->
+  <div  id = "Suma Aleatoria">
+    <h2>Suma Aleatoria</h2>
+    <p>¿Cuál es el resultado de la siguiente suma?</p>
+    <label id = "suma_aleatoria" type="text"></label>
+      <input id="resp_suma" type="text">
+    <button id = "ing_resp" onclick="suma_aleatoria()">Comprobar</button>
+    <p id="comprobacion"></p>
+    <p id = "tiempo"></p>
+  </div>
+
+  <!-- Negativos, Ceros y Positivos -->
+  <div id = "Negativos, Ceros y Positivos">
+    <h2>Negativos, Ceros y Positivos</h2>
+    <p>Ingresa diferentes números (negativos, cero o positivos) separado por comas, sin espacios.</p>
+    <p>Ej. 1,2,3,4,5</p>
+    <label id = "negativosypositivos" type="text"></label>
+      <input id="arreglo_num" type="text">
+    <button id = "ing_arr" onclick="negativos_ceros_positivos()">Clasificar</button>
+    <p id="negativos"></p>
+    <p id = "ceros"></p>
+    <p id = "positivos"></p>
+  </div>
+
+  <!-- Negativos, Ceros y Positivos -->
+  <div id = "Promedio">
+    <h2>Promedios</h2>
+    <p>Ingresa diferentes números separados por comas, sin espacios.</p>
+    <p>Ej. 1,2,3,4,5</p>
+<!--    <label id = "promedios" type="text"></label>-->
+    <input id="arreglo_num_prom" type="text">
+    <button id = "calc_prom" onclick="promedios()">Calcular Promedio</button>
+    <p id="promedio_resp"></p>
+  </div>
+
+  <!-- Inversos -->
+  <div id = "Inversos">
+    <h2>Número Inverso</h2>
+    <p>Ingresa un número de más de dos dígitos positivo.</p>
+<!--    <label id = "inverso" type="text"></label>-->
+    <input id="num" type="text">
+    <button id = "invertir" onclick="inverso()">Invertir Número</button>
+    <p id="num_inv"></p>
+  </div>
+
+  <!-- Problema Agregado -->
+  <div id = "Inversos">
+    <h2>Número Inverso</h2>
+    <p>Ingresa un número de más de dos dígitos positivo.</p>
+    <!--    <label id = "inverso" type="text"></label>-->
+    <input id="num" type="text">
+    <button id = "invertir" onclick="inverso()">Invertir Número</button>
+    <p id="num_inv"></p>
+  </div>
+
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
