@@ -29,6 +29,15 @@ body{
   justify-content: center!important;
   align-items: center!important;
 }
+.top {
+  top: 50px;
+  border: 3px solid green;
+}
+.left-property {
+  left: 150px;
+  border: 3px solid red;
+}
+
 .img{
   height: 60px;
   padding-bottom: 10px;
@@ -47,6 +56,51 @@ body{
   font-weight: bold;
   text-align: left;
   text-decoration: none;
+}
+.font-1 {
+  font-size: 2em;
+  font-family: "georgia", serif;
+}
+.font-2 {
+  font-size: 2em;
+  font-family: "helvetica",sans-serif;
+}
+.font-3 {
+  font-size: 2em;
+  font-family: "monaco", monospace;
+}
+.font-4 {
+  font-size: 2em;
+  font-family: "lucida handwriting", cursive;
+}
+.font-5 {
+  font-size: 2em;
+  font-family: "papyrus", fantasy;
+}
+.font-6 {
+  font-size: 2em;
+  font-family: "georgia", serif;
+  visibility: visible;
+}
+.font-7 {
+  font-size: 2em;
+  font-family: "helvetica",sans-serif;
+  visibility: hidden;
+}
+.font-8 {
+  font-size: 2em;
+  font-family: "monaco", monospace;
+  visibility: collapse;
+}
+.font-9 {
+  font-size: 2em;
+  font-family: "lucida handwriting", cursive;
+  visibility: inherit;
+}
+.font-10 {
+  font-size: 2em;
+  font-family: "papyrus", fantasy;
+  visibility: initial;
 }
 
 .p {

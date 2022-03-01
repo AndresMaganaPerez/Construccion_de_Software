@@ -21,15 +21,18 @@
 </header>
 
 <!-- Problema Agregado -->
-<div id = "Inversos">
+<div id = "problema_ex">
   <h2>Sort</h2>
-  <p>Ingresa un número de más de dos dígitos positivo.</p>
+  <p>Ingresa un número para añadir al arreglo desordenado.</p>
   <!--    <label id = "inverso" type="text"></label>-->
   <input id="num" type="text">
-  <button id = "invertir" onclick="inverso()">Invertir Número</button>
-  <p id="num_inv"></p>
+  <button id = "añadir" onclick="sort.add_arr()">añadir</button>
+  <p id="unsort_arr"></p>
+  <p>Presione el botón para ordenar el arreglo.</p>
+  <button id = "ordenar" onclick="sort.sort_arr()">ordenar</button>
+  <p id="sort_arr"></p>
 </div>
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/problematica_libre.js"></script>
 </body>
 </html>
