@@ -21,6 +21,7 @@ for (let i = 0; i < removeCardButton.length; i++){
 }
 
 let tshirt_all = document.querySelectorAll(".js-tshirt");
+let total_price = 0;
 
 for (let i = 0; i < tshirt_all.length;i++){
   let actual_tshirt = tshirt_all[i];
@@ -30,7 +31,7 @@ for (let i = 0; i < tshirt_all.length;i++){
   console.log(price);
   console.log(quantity);
 
-  let total_pricet = price*quantity;
+  total_price += price*quantity;
 
-  console.log(total_pricet);
+  console.log(total_price);
 }
