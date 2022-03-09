@@ -20,11 +20,17 @@ for (let i = 0; i < removeCardButton.length; i++){
   })
 }
 
-let price1 = document.getElementById("js-price1").value;
-let price2 = document.getElementById("js-price2").value;
-let price3 = document.getElementById("js-price3").value;
+let tshirt_all = document.querySelectorAll(".js-tshirt");
 
-console.log(price1);
-console.log(price2);
-console.log(price3);
+for (let i = 0; i < tshirt_all.length;i++){
+  let actual_tshirt = tshirt_all[i];
+  let price = actual_tshirt.querySelector(".js-price").innerHTML;
+  let quantity = actual_tshirt.querySelector(".js-input").value;
 
+  console.log(price);
+  console.log(quantity);
+
+  let total_pricet = price*quantity;
+
+  console.log(total_pricet);
+}
