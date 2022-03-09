@@ -19,3 +19,12 @@ for (let i = 0; i < removeCardButton.length; i++){
     row.remove();
   })
 }
+
+let price1 = document.getElementById("js-price1").value;
+let price2 = document.getElementById("js-price2").value;
+let price3 = document.getElementById("js-price3").value;
+
+console.log(price1);
+console.log(price2);
+console.log(price3);
+
