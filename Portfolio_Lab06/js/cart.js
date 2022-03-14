@@ -35,3 +35,12 @@ for (let i = 0; i < tshirt_all.length;i++){
 
   console.log(total_price);
 }
+
+price = document.getElementById("price");
+price.innerHTML = "$ " + total_price;
+
+iva = total_price*0.05;
+fprice = total_price + iva;
+
+final_price = document.getElementById("total-price");
+final_price.innerHTML = "$ " + fprice;
