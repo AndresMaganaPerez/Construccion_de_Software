@@ -3,7 +3,7 @@ const filesystem = require('fs');
 const http = require('http');
 
 const server = http.createServer((request,response) => {
-        if (request.url == '/') {
+        if (request.url === '/') {
             response.write('<!doctype html>');
             response.write('<html class="no-js" lang="">');
             response.write('<head>');
@@ -18,7 +18,7 @@ const server = http.createServer((request,response) => {
             response.write('<a href = "/sobreMi">Sobre Mi</a>');
             response.write('<a href = "/contacto">Contacto</a>');
         }
-        if (request.url == '/proyectos'){
+        else if (request.url === '/proyectos'){
             response.write('<!doctype html>');
             response.write('<html class="no-js" lang="">');
             response.write('<head>');
@@ -35,7 +35,7 @@ const server = http.createServer((request,response) => {
             response.write('<h2>The Nobodies</h2>');
             response.write('<p>Banda de Rock, donde soy el baterista. Hemos tenido bastantes tocadas para ser contadas. La más grande ha sido en el Teletón, donde fue transmitido a nivel internacional.</p>');
         }
-        if (request.url == '/sobreMi'){
+        else if (request.url === '/sobreMi'){
             response.write('<!doctype html>');
             response.write('<html class="no-js" lang="">');
             response.write('<head>');
@@ -54,24 +54,68 @@ const server = http.createServer((request,response) => {
             response.write('<h2>Medvsa</h2>');
             response.write('<p>Medvsa es una marca de ropa de artistas, donde se imprimen diferentes obras de los artistas en prendas para después venderlas.</p>');
         }
-    if (request.url == '/contacto'){
-        response.write('<!doctype html>');
-        response.write('<html class="no-js" lang="">');
-        response.write('<head>');
-        response.write('<meta charset="utf-8">');
-        response.write('<title>Proyectos</title>');
-        response.write('</head>');
-        response.write('<body>');
-        response.write('<a href = "/">Inicio</a>');
-        response.write('<a href = "/proyectos">Proyectos</a>');
-        response.write('<a href = "/sobreMi">Sobre Mi</a>');
-        response.write('<h1>Contacto<h1>');
-        response.write('<h2>Número Telefónico</h2>');
-        response.write('<p>443 105 1050</p>');
-        response.write('<h2>Correo electrónico académico</h2>');
-        response.write('<p>a01067963@tec.mx</p>');
-        response.write('<h2>Déjame un mensaje</h2>');
-        response.write('<input type="text">');
+        else if (request.url === '/contacto' && request.method === 'GET'){
+            response.write('<!doctype html>');
+            response.write('<html class="no-js" lang="">');
+            response.write('<head>');
+            response.write('<meta charset="utf-8">');
+            response.write('<title>Proyectos</title>');
+            response.write('</head>');
+            response.write('<body>');
+            response.write('<a href = "/">Inicio</a>');
+            response.write('<a href = "/proyectos">Proyectos</a>');
+            response.write('<a href = "/sobreMi">Sobre Mi</a>');
+            response.write('<h1>Contacto<h1>');
+            response.write('<h2>Número Telefónico</h2>');
+            response.write('<p>443 105 1050</p>');
+            response.write('<h2>Correo electrónico académico</h2>');
+            response.write('<p>a01067963@tec.mx</p>');
+            response.write('<h2>Déjame un mensaje</h2>');
+            response.write('<form action="/contacto" method="POST">');
+            response.write('<input name="mensaje" type="text">');
+            response.write('<input type="submit" value="Enviar">');
+            response.write('</form>');
+        }
+        else if (request.url === '/contacto' && request.method === 'POST'){
+            const datos = [];
+            request.on('data', (dato) => {
+                console.log(dato);
+                datos.push(dato);
+            });
+            return request.on('end', () =>{
+               console.log(datos);
+               const datos_completos = Buffer.concat(datos).toString();
+               console.log(datos_completos);
+               const nuevo_dato = datos_completos.split('=')[1];
+               console.log(nuevo_dato);
+                response.write('<!doctype html>');
+                response.write('<html class="no-js" lang="">');
+                response.write('<head>');
+                response.write('<meta charset="utf-8">');
+                response.write('<title>Proyectos</title>');
+                response.write('</head>');
+                response.write('<body>');
+                response.write('<a href = "/">Inicio</a>');
+                response.write('<a href = "/proyectos">Proyectos</a>');
+                response.write('<a href = "/sobreMi">Sobre Mi</a>');
+                response.write('<h1>Contacto<h1>');
+                response.write('<h2>Número Telefónico</h2>');
+                response.write('<p>443 105 1050</p>');
+                response.write('<h2>Correo electrónico académico</h2>');
+                response.write('<p>a01067963@tec.mx</p>');
+                response.write('<h2>Déjame un mensaje</h2>');
+                response.write('<form action="/contacto" method="POST">');
+                response.write('<input name="mensaje" type="text">');
+                response.write('<input type="submit" value="Enviar">');
+                response.write('</form>');
+                response.write('<p>El mensaje que escribiste es: <br></p>');
+                response.write(nuevo_dato);
+            });
+        }
+        else {
+            response.statusCode = 404;
+            response.write('<h1>404 ERROR</h1>');
+        }
     }
-    }
-)
+);
+server.listen(1000);
