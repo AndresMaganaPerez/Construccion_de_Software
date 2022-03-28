@@ -4,7 +4,7 @@ table of contents](TOC.md)
 # Usage
 
 The most basic usage of HTML5 Boilerplate is to create a static site or simple
-app. Once you've downloaded or cloned the project, that process looks something
+index. Once you've downloaded or cloned the project, that process looks something
 like this:
 
 1. Set up the basic structure of the site.
@@ -115,7 +115,7 @@ corresponding snippet at the bottom to include your analytics ID.
 
 ### humans.txt
 
-Edit this file to include the team that worked on your site/app, and the
+Edit this file to include the team that worked on your site/index, and the
 technology powering it.
 
 ### package.json

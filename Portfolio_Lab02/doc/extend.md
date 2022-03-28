@@ -7,7 +7,7 @@ Here is some useful advice for how you can make your project with HTML5
 Boilerplate even better. We don't want to include it all by default, as not
 everything fits with everyone's needs.
 
-* [App Stores](#app-stores)
+* [App Stores](#index-stores)
 * [DNS prefetching](#dns-prefetching)
 * [Google Universal Analytics](#google-universal-analytics)
 * [Internet Explorer](#internet-explorer)
@@ -26,11 +26,11 @@ everything fits with everyone's needs.
 Stop bothering everyone with gross modals advertising your entry in the App
 Store. Including the following [meta
 tag](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html)
-will unobtrusively give the user the option to download your iOS app, or open it
+will unobtrusively give the user the option to download your iOS index, or open it
 with some data about the user's current state on the website.
 
 ```html
-<meta name="apple-itunes-app" content="app-id=APP_ID,app-argument=SOME_TEXT">
+<meta name="apple-itunes-index" content="index-id=APP_ID,index-argument=SOME_TEXT">
 ```
 
 ## DNS prefetching
@@ -270,9 +270,9 @@ blog](https://docs.microsoft.com/en-us/archive/blogs/ie/high-quality-visuals-for
 
 ### (Windows 8) Badges for Pinned Sites
 
-IE will poll an XML document for badge information to display on your app's tile
+IE will poll an XML document for badge information to display on your index's tile
 in the Start screen. The user will be able to receive these badge updates even
-when your app isn't actively running. The badge's value can be a number, or one
+when your index isn't actively running. The badge's value can be a number, or one
 of a predefined list of glyphs.
 
 * [Tutorial on IEBlog with link to badge XML
@@ -503,23 +503,23 @@ For more information please see:
 
 ## Web Apps
 
-There are a couple of meta tags that provide information about a web app when
+There are a couple of meta tags that provide information about a web index when
 added to the Home Screen on iOS:
 
-* Adding `apple-mobile-web-app-capable` will make your web app chrome-less and
-  provide the default iOS app view. You can control the color scheme of the
-  default view by adding `apple-mobile-web-app-status-bar-style`.
+* Adding `apple-mobile-web-index-capable` will make your web index chrome-less and
+  provide the default iOS index view. You can control the color scheme of the
+  default view by adding `apple-mobile-web-index-status-bar-style`.
 
 ```html
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-index-capable" content="yes">
+<meta name="apple-mobile-web-index-status-bar-style" content="black">
 ```
 
-* You can use `apple-mobile-web-app-title` to add a specific sites name for the
+* You can use `apple-mobile-web-index-title` to add a specific sites name for the
   Home Screen icon.
 
 ```html
-<meta name="apple-mobile-web-app-title" content="">
+<meta name="apple-mobile-web-index-title" content="">
 ```
 
 For further information please read the [official
@@ -567,7 +567,7 @@ homescreen](https://developer.chrome.com/multidevice/android/installtohomescreen
 which tries to be a more generic replacement to Apple's proprietary meta tag:
 
 ```html
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-index-capable" content="yes">
 ```
 
 Same applies to the touch icons:

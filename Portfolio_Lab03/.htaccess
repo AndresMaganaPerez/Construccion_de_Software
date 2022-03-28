@@ -172,7 +172,7 @@ Options -MultiViews
   # Manifest files
 
     AddType application/manifest+json                   webmanifest
-    AddType application/x-web-app-manifest+json         webapp
+    AddType application/x-web-index-manifest+json         webapp
     AddType text/cache-manifest                         appcache
 
 
@@ -846,7 +846,7 @@ ServerSignature Off
                                       "application/wasm" \
                                       "application/x-font-ttf" \
                                       "application/x-javascript" \
-                                      "application/x-web-app-manifest+json" \
+                                      "application/x-web-index-manifest+json" \
                                       "application/xhtml+xml" \
                                       "application/xml" \
                                       "font/eot" \
@@ -1112,7 +1112,7 @@ FileETag None
   # Manifest files
 
     ExpiresByType application/manifest+json             "access plus 1 week"
-    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType application/x-web-index-manifest+json   "access plus 0 seconds"
     ExpiresByType text/cache-manifest                   "access plus 0 seconds"
 
 

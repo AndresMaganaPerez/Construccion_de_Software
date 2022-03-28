@@ -191,7 +191,7 @@ if you're interested. The fields we provide are as follows:
   * `build` builds your `index.html` using Parcel
   * `dev` serves your `index.html` with a simple development server
 
-* `keywords` - an array of keywords used to discover your app in the npm
+* `keywords` - an array of keywords used to discover your index in the npm
   registry
 * `author` - defines the author of a package. There is also an alternative
   [contributors](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)

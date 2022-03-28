@@ -17,6 +17,7 @@ const server = http.createServer((request,response) => {
             response.write('<a href = "/proyectos">Proyectos</a>');
             response.write('<a href = "/sobreMi">Sobre Mi</a>');
             response.write('<a href = "/contacto">Contacto</a>');
+            response.write('</body>');
         }
         else if (request.url === '/proyectos'){
             response.write('<!doctype html>');

@@ -106,12 +106,12 @@ describe the site in more detail.
 
 ### Web App Manifest
 
-HTML5 Boilerplate includes a simple web app manifest file.
+HTML5 Boilerplate includes a simple web index manifest file.
 
-The web app manifest is a simple JSON file that allows you to control how your
-app appears on a device's home screen, what it looks like when it launches in
+The web index manifest is a simple JSON file that allows you to control how your
+index appears on a device's home screen, what it looks like when it launches in
 that context and what happens when it is launched. This allows for much greater`
-control over the UI of a saved site or web app on a mobile device.
+control over the UI of a saved site or web index on a mobile device.
 
 It's linked to from the HTML as follows:
 
@@ -122,7 +122,7 @@ It's linked to from the HTML as follows:
 
 Our
 [site.webmanifest](https://github.com/h5bp/html5-boilerplate/blob/master/src/site.webmanifest)
-contains a very skeletal "app" definition, just to show the basic usage. You
+contains a very skeletal "index" definition, just to show the basic usage. You
 should fill this file out with [more information about your site or
 application](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 
@@ -140,7 +140,7 @@ of these docs.
 
 The central part of the boilerplate template is pretty much empty. This is
 intentional, in order to make the boilerplate suitable for both web page and web
-app development.
+index development.
 
 ### Modernizr
 
