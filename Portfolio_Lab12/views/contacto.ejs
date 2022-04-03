@@ -14,5 +14,10 @@
             <input name="mensaje" type="text">
             <input type="submit" value="Enviar">
         </form>
+
+       <% if (mensajeEJS != '') { %>
+          <br>
+          <p>El mensaje enviado fue: <%= mensajeEJS %> </p>
+       <% } %>
     </div>
 <%- include('includes/footer.ejs') %>
