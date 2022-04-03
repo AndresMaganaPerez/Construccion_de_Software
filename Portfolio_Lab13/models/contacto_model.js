@@ -9,7 +9,7 @@ module.exports = class Mensaje {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto.
     save() {
-        mensajes.push(this.texto);
+        mensajes.push(this);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.

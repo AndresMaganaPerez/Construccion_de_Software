@@ -1,19 +1,21 @@
 const {request, response} = require("express");
-const mensajesJS = [{contenidoMensaje: 'Hola'}];
+//const mensajesJS = [{contenidoMensaje: 'Hola'}];
+
+const Mensaje = require('../models/contacto_model');
 
 exports.contacto = (request, response, next) => {
-    response.render('contacto', {mensajesEJS: mensajesJS});
+    response.render('contacto');
 }
 
 exports.nuevomensaje = (request, response, next) => {
-    response.render('contacto_nuevomensaje', {mensajesEJS: mensajesJS})
+    response.render('contacto_nuevomensaje', {mensajesEJS: Mensaje.fetchMensajes()})
 }
 
+/*
 exports.mensajePost = (request, response, next) => {
     mensajesJS.push({contenidoMensaje: request.body.mensaje});
     response.redirect('/contacto/nuevomensaje');
-}
-
+}*/
 
 /*
 exports.getMensaje = (request, response, next) => {
@@ -22,14 +24,12 @@ exports.getMensaje = (request, response, next) => {
     });
 };
  */
-/*
+
 exports.postMensaje = (request, response) => {
     console.log("Posted");
     console.log(request.body);
     const nuevo_mensaje = new Mensaje(request.body.mensaje);
-    nueva_pelicula.save();
+    nuevo_mensaje.save();
     //filesystem.writeFileSync('peliculas.txt', peliculas.toString());
-    response.redirect('/peliculas/');
-    response.end();
+    response.redirect('/contacto/nuevomensaje');
 };
-*/

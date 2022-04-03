@@ -11,7 +11,7 @@ router.get("/", contactoController.contacto);
 
 router.get("/nuevomensaje", contactoController.nuevomensaje);
 
-router.post("/nuevomensaje", contactoController.mensajePost);
+router.post("/nuevomensaje", contactoController.postMensaje);
 
 
 module.exports = router;
