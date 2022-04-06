@@ -1,0 +1,24 @@
+<%- include('includes/header.ejs') %>
+    <div class="container mt-5 pr-5">
+        <div class="text-center fs-2 fw-bold mb-4">
+            Login
+        </div>
+        <form action="/" method="POST">
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <!-- <span><i class="bi bi-person"></i></span>-->
+                <input type="text" class="form-control" placeholder="Username" name="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                <!--        <span><i class="bi bi-person"></i></span>-->
+                <input type="password" class="form-control" placeholder="Password" name="Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="d-grid gap-2">
+<!--                 <input type="submit" value="enviar"> -->
+                <button class="btn btn-primary btn-success" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+<%- include('includes/footer.ejs') %>

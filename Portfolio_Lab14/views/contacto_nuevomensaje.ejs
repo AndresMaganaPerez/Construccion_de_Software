@@ -1,0 +1,27 @@
+<%- include('includes/header.ejs') %>
+    <div class="container">
+        <h1>Contacto<h1>
+        <br>
+        <h2>Número Telefónico</h2>
+        <br>
+        <p>443 105 1050</p>
+        <br>
+        <h2>Correo electrónico académico</h2>
+        <p>a01067963@tec.mx</p>
+        <br>
+        <h2>Mensajes enviados: </h2>
+        <br>
+
+       <!-- Imprimir mensajes -->
+           <% for (let mensaje of mensajesEJS){ %>
+               <div class="card">
+                 <div class="card-body">
+                   <%= mensaje.texto %>
+                 </div>
+               </div>
+           <%} %>
+           <h2>Cookie guardada</h2>
+           <%= msj_cookie %>
+    </div>
+
+<%- include('includes/footer.ejs') %>
