@@ -1,0 +1,82 @@
+<%- include('includes/header.ejs') %>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% if (proyectos.length > 0) { %>
+        <% for (let proyecto of proyectos) { %>
+            <div class="col">
+                <div class="card">
+                    <img src="<%= proyecto.img %>" class="card-img-top" alt="Medvsa">
+                    <div class="middle">
+                        <div class="text">
+                            <h5 class="card-title"><%= proyecto.nombre %></h5>
+                            <p class="card-text"><%= proyecto.descripcion %></p>
+                            <p class="card-date"><%= proyecto.fecha.toString().substr(0,15) %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <% } else { %>
+        <h3>No hay proyectos existentes</h3>
+    <% } %>
+    </div>
+    <a href="/proyectos/nuevoproyecto">Ingresar Nuevo Proyecto</a>
+</div>
+
+    <!-- <div class="col">
+        <div class="card">
+            <img src="../img/hoodie_1.JPG" class="card-img-top" alt="Hoodie 1">
+            <div class="card-body">
+                <h5 class="card-title">Hoodie Medvsa </h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="../img/hoodie_2.JPG" class="card-img-top" alt="Hoodie 2">
+            <div class="card-body">
+                <h5 class="card-title">Hoodie Medvsa</h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="../img/the_nobodies_logo_colores_fondo.png" class="card-img-top" alt="The Nobodies">
+            <div class="card-body">
+                <h5 class="card-title">The Nobodies</h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="../img/posada_1.jpeg" class="card-img-top" alt="The Nobodies">
+            <div class="card-body">
+                <h5 class="card-title">The Nobodies</h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="../img/todomadera_1.jpg" class="card-img-top" alt="The Nobodies">
+            <div class="card-body">
+                <h5 class="card-title">The Nobodies</h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="../img/thenobodies.jpg" class="card-img-top" alt="The Nobodies">
+            <div class="card-body">
+                <h5 class="card-title">The Nobodies</h5>
+                <p class="card-text">Prueba</p>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+<%- include('includes/footer.ejs') %>

@@ -1,0 +1,20 @@
+<%- include('includes/header.ejs') %>
+    <div class="container">
+        <h1>Contacto<h1>
+        <br>
+        <h2>Número Telefónico</h2>
+        <br>
+        <p>443 105 1050</p>
+        <br>
+        <h2>Correo electrónico académico</h2>
+        <p>a01067963@tec.mx</p>
+        <br>
+        <h2>Déjame un mensaje</h2>
+        <form action="/contacto/nuevomensaje" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+            <input name="mensaje" type="text">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+<%- include('includes/footer.ejs') %>
+
