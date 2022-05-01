@@ -13,10 +13,9 @@ exports.get = (request, response, next) => {
 
 exports.get_nuevo = (request, response, next) => {
     response.render('nuevo_proyecto');
-}
+};
 
 exports.post = (request, response, next) => {
-    //console.log(request.body);
     const proyecto = new Proyecto(request.body.nombre, request.body.descripcion, request.body.imagen);
     console.log(proyecto);
     proyecto.save()
@@ -25,4 +24,4 @@ exports.post = (request, response, next) => {
     }) .catch(err => {
         console.log(err);
     })
-}
+};
