@@ -3,6 +3,7 @@
         <h1>Ingresa un nuevo Proyecto a la librería</h1>
         <br>
         <form action="" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
             <h3>Nombre del Proyecto</h3>
             <br>
             <input type="text" name="nombre">
